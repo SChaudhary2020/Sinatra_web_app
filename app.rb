@@ -2,14 +2,10 @@ require "sinatra"
 require "sinatra/reloader"
 require "active_support/all"
 
-get("/") do
-  "
-  <h1>Welcome to Chicago!</h1>
-  "
-end
-get("/login/page") do
-  erb(:loginpage)
 
+get("/login/page") do
+  
+  erb(:loginpage)
 end
 
 get("/login/result") do
@@ -24,5 +20,9 @@ get("/login/result") do
   erb(:login_result)
 end
 get("/home/page") do
+  erb(:homepage)
+end
+get("/") do
+  erb(:loginpage)
   erb(:homepage)
 end
