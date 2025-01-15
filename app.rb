@@ -4,7 +4,7 @@ require "active_support/all"
 
 
 get("/login/page") do
-  
+  erb(:homepage)
   erb(:loginpage)
 end
 
@@ -22,7 +22,10 @@ end
 get("/home/page") do
   erb(:homepage)
 end
+get("/result/page") do
+  
+  erb(:result_page)
+end
 get("/") do
   erb(:loginpage)
-  erb(:homepage)
 end
